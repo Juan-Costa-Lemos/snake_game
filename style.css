@@ -1,0 +1,17 @@
+body{
+    height: 95vh;
+    width: 95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(35, 107, 73);
+    font-size: 26px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+
+}
+
+.canvas snake{
+    border: black solid 4px;
+}
