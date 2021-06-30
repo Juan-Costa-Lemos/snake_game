@@ -9,7 +9,7 @@ snake[0]={
 
 let direction= "right";
 
-/* criando a comidan em local aleatorio no tabuleiro */
+/* criando a comida em local aleatorio no tabuleiro */
 let food={
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
@@ -24,7 +24,7 @@ function criarBG(){
 }
 
 function criarCobrinha(){
- for(i=0; i < snake.length ;i++){/*  */
+ for(i=0; i < snake.length ;i++){
     context.fillStyle = "green";
     context.fillRect(snake[i].x, snake[i].y, box, box);
 
@@ -37,7 +37,7 @@ function drawFood(){
 }
 
 /* sencibilidade no botão  */
-document.addEventListener("keydown",update);/* ato de precionar a tecla e vai atualizar */
+document.addEventListener("keydown",update);
 
 function update(event){
     if(event.keyCode == 37 && direction != "right") direction = "left"; /* fazendo a proibição para ela não poder ir na direção inversa */
@@ -76,7 +76,7 @@ function iniciarJogo(){
     if(direction == "down") snakeY += box;
 
     if(snakeX != food.x || snakeY != food.y){
-        snake.pop();/* função para tirar o ultimo elemento do array */
+        snake.pop();/* função para tirar o ultimo elemento*/
     }else{
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box
@@ -96,7 +96,7 @@ function iniciarJogo(){
 
 }
 
-/*  da continuidade ao jogo a cada 100milisegundo pra ele não travar */
+
 let jogo = setInterval(iniciarJogo, 100);
 
 
